@@ -1,0 +1,23 @@
+<template name="emojis">
+	<h4>Emoji's to buy</h4>
+
+	<table>
+		<tr>
+			<th>Symbol</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Shares</th>
+			<th>Action</th>
+		</tr>
+		{{#each emojis}}
+		<tr>
+			<td>{{symbol}}</td>
+			<td>{{name}}</td>
+			<td>{{price}}</td>
+			<td>{{shares}}</td>
+			<td><button class="buy-emoji" id="{{_id}}">Buy</button></td>
+
+		</tr>
+		{{/each}}
+	</table>
+</template>
