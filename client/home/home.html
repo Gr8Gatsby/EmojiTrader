@@ -1,0 +1,16 @@
+<body>
+	{{> loginButtons}}
+	{{> navbar}}
+</body>
+
+<template name="home">
+  <h1>Welcome to Emoji Trader</h1>
+  <h3>{{tagLine}}</h3>
+
+	{{#if currentUser}}
+		<h1>User is logged in.</h1>
+	{{else}}
+		<h1>Please login to play</h1>
+	{{/if}}
+
+</template>

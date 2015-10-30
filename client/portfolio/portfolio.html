@@ -1,0 +1,10 @@
+<template name="portfolio">
+	<h1>Your portfolio</h1>
+	{{#if currentUser}}
+		{{#each portfolio}}
+			Cash: {{cash}}
+		{{/each}}
+	{{else}}
+		<h1>Please login to play</h1>
+	{{/if}}
+</template>
