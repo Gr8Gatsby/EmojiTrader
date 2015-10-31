@@ -1,3 +1,5 @@
 <template name="navbar">
-	<a href="/portfolio">Portfolio</a> <a href="/">Home</a>
+{{#if currentUser}}
+	<a href="/portfolio">Portfolio</a> <a href="/">Home</a> <a href="/trades">Trades</a>
+{{/if}}
 </template>

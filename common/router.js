@@ -5,3 +5,7 @@ Router.route('/', function(){
 Router.route('/portfolio', function(){
 	this.render('portfolio');
 });
+
+Router.route('/trades', function(){
+	this.render('trades');
+});

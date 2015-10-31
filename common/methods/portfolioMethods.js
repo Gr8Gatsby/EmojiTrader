@@ -20,5 +20,8 @@ Meteor.methods({
 
         // Temporary
         //Meteor.call('buySecurity', Securities.find({name:"Cat Face"}).fetch(),1);
+    },
+    updatePortfolio: function(emoji, shares){
+        // This function needs to update the number of shares a portfolio holds
     }
 })

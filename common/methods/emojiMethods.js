@@ -27,6 +27,7 @@ Meteor.methods({
 		});
 	},
 	buyEmoji: function(emoji){
-		console.log(emoji.price);
+		// Save a record of the trade
+		Meteor.call('recordTrade',emoji);
 	}
 });

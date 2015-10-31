@@ -1,3 +1,18 @@
 <template name="trades">
-	
+	{{#if currentUser}}
+	<table>
+	<tr>
+		<th>Date traded</th>
+		<th>Emoji</th>
+		<th>Price</th>
+	</tr>
+	{{#each trades}}
+	<tr>
+		<td>{{createdAt}}</td>
+		<td>{{emojiSymbol}}</td>
+		<td>{{price}}</td>
+	</tr>
+	{{/each}}
+	</table>
+	{{/if}}
 </template>
