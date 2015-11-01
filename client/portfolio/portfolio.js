@@ -14,6 +14,14 @@ if(Meteor.isClient){
 		},
 		isOwner: function(){
 			return this.owner === Meteor.userId();
+		},
+		getEmojiPrice: function(emojiSymbol){
+			emoji = Emojis.find({symbol: emojiSymbol}).fetch();
+			return emoji[0].price;
+		},
+		getEmojiTotal: function(emojiSymbol, shares){
+			emoji = Emojis.find({symbol: emojiSymbol}).fetch();
+			return (emoji[0].price * shares)
 		}
 	});
 }

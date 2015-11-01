@@ -9,7 +9,7 @@ Meteor.methods({
                 cash: 1000,
                 createdAt: new Date(),
                 owner: Meteor.userId(),
-                emojis: []
+                emojis: [{emojiSymbol: "❤", shares: 5},{emojiSymbol: "☂", shares: 8}]
             });
         } else if(portfolio.count() > 1) {
             console.log("Error: Someone has more than one portfolio!")
@@ -23,5 +23,7 @@ Meteor.methods({
     },
     updatePortfolio: function(emoji, shares){
         // This function needs to update the number of shares a portfolio holds
+        //Portfolios.update({owner: Meteor.userId()}, {$addToSet: {emojis:emoji, shares}})
+        Portfolios.update({owner: Meteor.userId()}, )
     }
 })

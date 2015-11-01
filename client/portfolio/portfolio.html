@@ -3,6 +3,24 @@
 	{{#if currentUser}}
 		{{#each portfolio}}
 			Cash: {{cash}}
+			<table>
+			<tr>
+				<th>Emoji</th>
+				<th>Emoji Id</th>
+				<th>Shares</th>
+				<th>Price</th>
+				<th>Total</th>
+			</tr>
+			{{#each emojis}}
+				<tr>
+					<td>{{emojiSymbol}}</td>
+					<td>{{emojiId}}</td>
+					<td>{{shares}}</td>
+					<td>{{getEmojiPrice emojiSymbol}}</td>
+					<td>{{getEmojiTotal emojiSymbol shares}}</td>
+				</tr>
+			{{/each}}
+			</table>
 		{{/each}}
 		{{> emojis}}
 	{{else}}

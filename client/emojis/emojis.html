@@ -3,6 +3,7 @@
 
 	<table>
 		<tr>
+			<th>ID</th>
 			<th>Symbol</th>
 			<th>Name</th>
 			<th>Price</th>
@@ -11,12 +12,12 @@
 		</tr>
 		{{#each emojis}}
 		<tr>
+			<td>{{_id}}</td>
 			<td>{{symbol}}</td>
 			<td>{{name}}</td>
 			<td>{{price}}</td>
 			<td>{{shares}}</td>
 			<td><button class="buy-emoji" id="{{_id}}">Buy</button></td>
-
 		</tr>
 		{{/each}}
 	</table>

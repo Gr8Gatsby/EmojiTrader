@@ -3,12 +3,14 @@
 	<table>
 	<tr>
 		<th>Date traded</th>
-		<th>Emoji</th>
+		<th>Emoji Id</th>
+		<th>Emoji Symbol</th>
 		<th>Price</th>
 	</tr>
 	{{#each trades}}
 	<tr>
 		<td>{{createdAt}}</td>
+		<td>{{emojiId}}</td>
 		<td>{{emojiSymbol}}</td>
 		<td>{{price}}</td>
 	</tr>
